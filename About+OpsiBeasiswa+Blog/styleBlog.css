@@ -1,0 +1,162 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f0ede8;
+  color: #333;
+}
+
+.header-detail {
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.Tombol-signup a {
+    background-color: white;
+    color: #0096FF !important;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.thumbnail{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #407f9e;
+  margin-bottom: 1rem;
+}
+
+.article-card {
+  display: flex;
+  background: white;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ccc;
+}
+
+.thumb {
+  width: 100px;
+  height: 100px;
+  background-color: #407f9e;
+  border-radius: 5px;
+}
+
+.article-content h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.article-content p {
+  font-size: 0.8rem;
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.detail {
+  text-align: left;
+}
+
+.detail-thumb {
+  background-color: #407f9e;
+  height: 200px;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.detail-content {
+  padding: 40px 10vw;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.author {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.full-article {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.thumbnail-post {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.thumbnail-post img{
+  width: 40vw;
+  border-radius: 8px;
+}
+
+.btn-kembali {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #36D1DC; 
+  background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  
+  background: linear-gradient(to right, #5B86E5, #36D1DC); 
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(64, 127, 158, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  margin: 20px;
+}
+
+.btn-kembali i {
+  font-size: 20px;
+}
+
+.btn-kembali:hover,
+.btn-kembali:focus {
+  background-color: #2e5f7a;
+  box-shadow: 0 6px 12px rgba(46, 95, 122, 0.6);
+  outline: none;
+}
+
+.btn-kembali:active {
+  background-color: #24506b;
+  box-shadow: 0 2px 6px rgba(36, 80, 107, 0.7);
+}
+
+
+

@@ -9,15 +9,20 @@
 
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Beazy</div>
-    <nav class="navbar-menu">
-      <a href="home.html">Home</a>
-      <a href="OpsiBeasiswa.html">Beasiswa</a>
-      <a href="BlogArtikel.html">Artikel</a>
-      <a href="profile.html"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon"></a>
-    </nav>
-  </header>
+  <nav class="navbar navbar-menu">
+  <div class="logo">Beazy</div> <!-- Optional: Tambahkan logo atau teks brand -->
+  <button class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="home.html">Home</a>
+    <a href="OpsiBeasiswa.html">Beasiswa</a>
+    <a href="BlogArtikel.html">Artikel</a>
+    <a href="profile.html">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
+    </a>
+  </div>
+</nav>
 
   <main class="container">
     <section class="detail">
@@ -97,6 +102,14 @@
       &copy; 2025 Beazy. All rights reserved.
     </div>
   </footer>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>

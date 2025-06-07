@@ -34,16 +34,12 @@ body {
 
 
 .profile-icon {
-    font-size: 30px;
-    background-color: white;
-    color: #0096FF;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
 .logo span {
@@ -330,4 +326,128 @@ select:focus {
 .Tombol-signup a:hover {
     background-color: #3b82f6;
     color: white !important;
+}
+
+.hamburger {
+  display: none; 
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 768px) {
+    .hamburger {
+    display: block;
+    
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(to right,#5B86E5, #36D1DC);
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .navbar, header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .navbar .logo {
+    margin-bottom: 10px;
+  }
+
+  .profile-icon {
+    margin-top: 10px;
+  }
+
+  .detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .program-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .right-section {
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  .profile-header {
+    text-align: center;
+  }
+}
+
+/* Untuk HP kecil */
+@media (max-width: 480px) {
+  .navbar, header {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .navbar-menu {
+    gap: 8px;
+  }
+
+  .program-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .apply-btn {
+    width: 100%;
+  }
+
+  .info-box {
+    flex: 1 1 100%;
+  }
+
+  .footer-box {
+    min-width: unset;
+  }
+
+  .edit-button {
+    width: 100%;
+  }
 }

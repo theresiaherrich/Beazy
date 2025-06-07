@@ -13,7 +13,7 @@ body {
 }
 
 .left-panel {
-  background-color: #3D7C98;
+  background: linear-gradient(to right,#5B86E5, #36D1DC); 
   width: 50%;
   padding: 50px;
   display: flex;

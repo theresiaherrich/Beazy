@@ -86,7 +86,7 @@ nav a {
 .apply-btn {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #002f6c;
+  background-color: #4182F9;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -94,7 +94,7 @@ nav a {
 }
 
 .apply-btn:hover {
-  background-color: #001f4d;
+  background-color: #4182F9;
 }
 
 .deskripsi {

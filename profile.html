@@ -11,16 +11,19 @@
 </head>
 
 <body>
-
-    <header class="navbar">
+    <nav class="navbar">
         <div class="logo">Beazy</div>
-        <nav class="navbar-menu">
-            <a href="index.html">Home</a>
+        <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="popup-menu" id="popup-menu">
+            <a href="home.html">Home</a>
             <a href="OpsiBeasiswa.html">Beasiswa</a>
             <a href="BlogArtikel.html">Artikel</a>
             <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main>
         <section class="profile-container">
@@ -29,7 +32,8 @@
                     <h2>Profile</h2>
                 </div>
                 <div class="profile-picture-wrapper">
-                    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Foto Profil" class="profile-photo" />
+                    <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Foto Profil"
+                        class="profile-photo" />
                     <label for="upload-photo" class="camera-icon">
                         <i class="fas fa-camera"></i>
                     </label>
@@ -78,5 +82,21 @@
             <button class="edit-button">Save</button>
         </section>
     </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const popupMenu = document.getElementById('popup-menu');
+
+        hamburger.addEventListener('click', () => {
+            popupMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !popupMenu.contains(e.target)) {
+                popupMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
+
 </html>

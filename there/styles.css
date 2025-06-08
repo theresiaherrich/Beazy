@@ -188,7 +188,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Tambahkan ini untuk vertikal */
+  flex-direction: column; 
   margin-bottom: 30px;
   gap: 20px;
 }
@@ -336,6 +336,11 @@ select:focus {
   color: white;
   cursor: pointer;
 }
+
+.popup-menu {
+  display: none; 
+}
+
 /* ========== RESPONSIVE DESIGN ========== */
 
 @media (max-width: 768px) {
@@ -343,6 +348,44 @@ select:focus {
     display: block;
     
   }
+
+.popup-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 180px;
+  text-align: left;
+}
+
+.popup-menu a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s;
+}
+
+.popup-menu a:hover {
+  color: #3b82f6;
+}
+
+.popup-menu .signup-link {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.popup-menu.active {
+  display: flex;
+}
+
 
   .nav-links {
     display: none;
@@ -363,10 +406,12 @@ select:focus {
   }
 
   .navbar, header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
 
   .navbar-menu {
     flex-direction: column;

@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Detail Beasiswa</title>
   <link rel="stylesheet" href="there/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
-  <nav class="navbar navbar-menu">
-  <div class="logo">Beazy</div> <!-- Optional: Tambahkan logo atau teks brand -->
-  <button class="hamburger" id="hamburger">
-    <i class="fas fa-bars"></i>
-  </button>
-  <div class="nav-links" id="nav-links">
-    <a href="home.html">Home</a>
-    <a href="OpsiBeasiswa.html">Beasiswa</a>
-    <a href="BlogArtikel.html">Artikel</a>
-    <a href="profile.html">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
-    </a>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="logo">Beazy</div>
+    <button class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="popup-menu" id="popup-menu">
+      <a href="home.html">Home</a>
+      <a href="OpsiBeasiswa.html">Beasiswa</a>
+      <a href="BlogArtikel.html">Artikel</a>
+      <a href="profile.html"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile"
+          class="profile-icon"></a>
+    </div>
+  </nav>
+
 
   <main class="container">
     <section class="detail">
       <div class="left-section">
-        <img src="https://file-filkom.ub.ac.id/fileupload/assets/upload/file/PTIIK/konten/2021-06/E5A_dkHVcAAsw-E.jpg" alt="Logo Beasiswa" class="program-img">
+        <img src="https://file-filkom.ub.ac.id/fileupload/assets/upload/file/PTIIK/konten/2021-06/E5A_dkHVcAAsw-E.jpg"
+          alt="Logo Beasiswa" class="program-img">
       </div>
       <div class="right-section">
         <h2>Beasiswa Brawijaya</h2>
@@ -74,7 +80,7 @@
     </section>
   </main>
 
-   <footer class="footer">
+  <footer class="footer">
     <div class="footer-content">
       <div class="footer-box">
         <h5>Beazy</h5>
@@ -83,18 +89,18 @@
       <div class="footer-box">
         <h5>Navigasi</h5>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Beasiswa</a></li>
-          <li><a href="#">Artikel</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="OpsiBeasiswa.html">Beasiswa</a></li>
+          <li><a href="BlogArtikel.html">Artikel</a></li>
         </ul>
       </div>
       <div class="footer-box">
         <h5>Ikuti Kami</h5>
         <div class="social-icons">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
@@ -103,13 +109,21 @@
     </div>
   </footer>
   <script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger');
+    const popupMenu = document.getElementById('popup-menu');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-</script>
+    hamburger.addEventListener('click', () => {
+      popupMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !popupMenu.contains(e.target)) {
+        popupMenu.classList.remove('active');
+      }
+    });
+  </script>
+
 
 </body>
+
 </html>

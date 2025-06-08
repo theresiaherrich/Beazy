@@ -11,12 +11,11 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar mobile-navbar">
         <div class="logo">Beazy</div>
         <button class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
         </button>
-
         <div class="popup-menu" id="popup-menu">
             <a href="home.html">Home</a>
             <a href="OpsiBeasiswa.html">Beasiswa</a>
@@ -24,6 +23,16 @@
             <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
         </div>
     </nav>
+
+    <header class="navbar desktop-navbar">
+        <div class="logo">Beazy</div>
+        <nav class="navbar-menu">
+            <a href="home.html">Home</a>
+            <a href="OpsiBeasiswa.html">Beasiswa</a>
+            <a href="BlogArtikel.html">Artikel</a>
+            <a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </nav>
+    </header>
 
     <main>
         <section class="profile-container">
@@ -88,12 +97,12 @@
         const popupMenu = document.getElementById('popup-menu');
 
         hamburger.addEventListener('click', () => {
-            popupMenu.classList.toggle('active');
+            popupMenu.classList.toggle('show');
         });
 
-        document.addEventListener('click', (e) => {
-            if (!hamburger.contains(e.target) && !popupMenu.contains(e.target)) {
-                popupMenu.classList.remove('active');
+        document.addEventListener('click', function (event) {
+            if (!hamburger.contains(event.target) && !popupMenu.contains(event.target)) {
+                popupMenu.classList.remove('show');
             }
         });
     </script>

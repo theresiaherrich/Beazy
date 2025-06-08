@@ -11,23 +11,33 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="logo">Beazy</div>
-    <button class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
+<nav class="navbar mobile-navbar">
+  <div class="logo">Beazy</div>
+  <button class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="popup-menu" id="popup-menu">
+    <a href="home.html">Home</a>
+    <a href="OpsiBeasiswa.html">Beasiswa</a>
+    <a href="BlogArtikel.html">Artikel</a>
+    <a href="profile.html">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
+    </a>
+  </div>
+</nav>
 
-    <div class="popup-menu" id="popup-menu">
-      <a href="home.html">Home</a>
-      <a href="OpsiBeasiswa.html">Beasiswa</a>
-      <a href="BlogArtikel.html">Artikel</a>
-      <a href="profile.html"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile"
-          class="profile-icon"></a>
-    </div>
+<header class="navbar desktop-navbar">
+   <div class="logo">Beazy</div>
+  <nav class="navbar-menu">
+    <a href="home.html">Home</a>
+    <a href="OpsiBeasiswa.html">Beasiswa</a>
+    <a href="BlogArtikel.html">Artikel</a>
+    <a href="profile.html">
+      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Profile" class="profile-icon">
+    </a>
   </nav>
-
+</header>
 
   <main class="container">
     <section class="detail">
@@ -109,19 +119,20 @@
     </div>
   </footer>
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const popupMenu = document.getElementById('popup-menu');
+  const hamburger = document.getElementById('hamburger');
+  const popupMenu = document.getElementById('popup-menu');
 
-    hamburger.addEventListener('click', () => {
-      popupMenu.classList.toggle('active');
-    });
+  hamburger.addEventListener('click', () => {
+    popupMenu.classList.toggle('show');
+  });
 
-    document.addEventListener('click', (e) => {
-      if (!hamburger.contains(e.target) && !popupMenu.contains(e.target)) {
-        popupMenu.classList.remove('active');
-      }
-    });
-  </script>
+  document.addEventListener('click', function(event) {
+    if (!hamburger.contains(event.target) && !popupMenu.contains(event.target)) {
+      popupMenu.classList.remove('show');
+    }
+  });
+</script>
+
 
 
 </body>
